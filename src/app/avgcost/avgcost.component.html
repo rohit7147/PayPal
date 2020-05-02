@@ -1,0 +1,44 @@
+<div class="parent">
+    <div class="allItems container">
+        <div class="items polaroid" *ngFor="let restaurant of allRestaurants">
+            <img src="../../assets/common.png" style="width:90%; margin-top: 1em;">
+            <div class="itemDetail container">
+                <div id="restaurantName">{{restaurant.restaurantName}}</div>
+                <div id="cuisine">{{restaurant.cuisines}}</div>
+                <div class="rating">
+                    <div id="aggt" [ngStyle]="{backgroundColor: getBackGroundColor(restaurant.aggregateRating)}">
+                        <div id="ricon">
+                            <i class="material-icons md-14"
+                                [ngStyle]="{color: getColor(restaurant.aggregateRating)}">star</i>
+                        </div>
+                        <div id=" rval" [ngStyle]="{color: getColor(restaurant.aggregateRating)}">
+                                {{
+                                    restaurant.aggregateRating == 0 ? '' : restaurant.aggregateRating
+                                }}
+                        </div>
+                    </div>
+                    <div id="text">{{restaurant.ratingText}}</div>
+                    <div id="votes">
+                        <div>Votes {{restaurant.votes}}</div>
+                    </div>
+                </div>
+                <div id="table">
+                    <div class="tdetl">
+                        <div>
+                            <span id="ttext">Table Booking</span> &nbsp;
+                            <span id="tval">{{restaurant.hasTableBooking}}</span>
+                        </div>
+                        <div id="cost">
+                            <span>{{restaurant.avgCostForTwo}}</span>&nbsp;
+                            <span>For Two</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="online">
+                    <span id="otext">Online Delivery</span>&nbsp;&nbsp;
+                    <span id="oval">{{restaurant.hasOnlineDelivery}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="parent">
+    <div class="brand"></div>
+    <div class="container">
+        <div class="col-lg-5 col-md-5">
+            <div class="rcount">
+                <div id="totalText">Total Restaurants</div>&nbsp;&nbsp;
+                <div id="totalValue">{{totalRestaurants}}</div>
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-7 midnav">
+            <div class="filters">
+                <div [ngClass]="activatedRoute == 'ALL' ? 'activeTab items' : 'disableTab items'"
+                    (click)="navigateToAll()">All</div>
+                <div [ngClass]="activatedRoute == 'RATING' ? 'activeTab items' : 'disableTab items'"
+                    (click)="navigateToRating()">Rating</div>
+                <div [ngClass]="activatedRoute == 'VOTES' ? 'activeTab items' : 'disableTab items'"
+                    (click)="navigateToVotes()">Votes</div>
+                <div [ngClass]="activatedRoute == 'AVGCOST' ? 'activeTab items' : 'disableTab items'"
+                    (click)="navigateToTwo()">Cost For Two</div>
+                <div [ngClass]="activatedRoute == 'FILTER' ? 'activeTab items' : 'disableTab items'"
+                    (click)="showCusines()">Filter</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <mat-chip-list>
+                <mat-chip *ngFor="let item of filterDisplay">{{item}}</mat-chip>
+            </mat-chip-list>
+        </div>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+    <p-sidebar styleClass="ui-sidebar-lg" [style]="{width:'30em', overflow: 'scroll'}"
+        [(visible)]="display">
+
+        <div style="font-size: large; font-weight: 500; margin-top: 1em; margin-bottom: 1em">
+            Cuisines
+        </div>
+        <div class="checkbox">
+            <p-checkbox class="col-lg-6 col-md-6 col-sm-6 box" name="groupname" *ngFor="let item of cuisineList"
+                label={{item}} value={{item}} [(ngModel)]="selectedCuisine"></p-checkbox>
+        </div>
+        <div class="sbfoot">
+            <div id="clear" (click)="clearFilter()">
+                CLEAR
+            </div>
+            <div id="applyfilter" (click)="applyFilter()">
+                APPLY FILTER
+            </div>
+        </div>
+    </p-sidebar>
+</div>

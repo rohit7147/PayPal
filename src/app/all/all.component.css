@@ -1,0 +1,105 @@
+.parent {
+    padding-top: 2em;
+}
+
+.allItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.items:hover {
+    border: solid 1px #D3D5DF;
+}
+
+.items {
+    margin-bottom: 2em;
+    width: 296px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    padding: 10px;
+}
+
+.itemDetail {
+    width: 90%;
+}
+
+#restaurantName {
+    font-size: medium;
+    font-weight: 500;
+}
+
+#cuisine {
+    color: #686b78;
+    font-size: small;
+}
+
+.material-icons.md-14 {
+    font-size: 14px;
+}
+
+#text {
+    color: #535665;
+}
+
+#cost {
+    color: #535665;
+    font-size: small;
+}
+
+#ricon {
+    margin-top: 3px;
+}
+
+#rval {
+    font-size: 14px;
+}
+
+#aggt {
+    width: 57px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    align-items: center;
+    font-size: small;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+#votes {
+    color: #535665;
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+}
+
+#otext, #ttext {
+    font-size: medium;
+    font-weight: 500;
+}
+
+#tval, #oval {
+    color: #535665;
+    font-size: smaller;
+}
+
+#table, #online {
+    margin-top: 10px;
+}
+
+.tdetl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

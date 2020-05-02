@@ -1,0 +1,19 @@
+<div class="parent navbar">
+    <div class="container">
+        <div class="logo" (click)="goHome()">
+
+        </div>
+        <div class="search">
+            <p-autoComplete [(ngModel)]="selectedRestaurant" [suggestions]="filteredRestaurants"
+                (completeMethod)="searchRestaurants($event)" [size]="45" [minLength]="1" placeholder="Search Restaurants"
+                [dropdown]="false" (onSelect)="onRestaurantChange(selectedRestaurant)" field="restaurantName">
+                <ng-template let-r pTemplate="selectedRestaurant">
+                    <div class="dropDownPanel">
+                        <div class="title">{{r.restaurantName}}</div>
+                        <div class="subtitle">{{r.cuisines}}</div>
+                    </div>
+                </ng-template>
+            </p-autoComplete>
+        </div>
+    </div>
+</div>

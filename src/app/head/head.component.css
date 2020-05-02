@@ -1,0 +1,46 @@
+.parent {
+    height: 80px;
+    background-color: #FFFFFF;
+    box-shadow: 0 15px 40px -20px rgba(40,44,63,.15);
+    position: fixed;
+    width: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    height: 100%;
+    width: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('https://www.paypalobjects.com/digitalassets/c/website/logo/full-text/pp_fc_hl.svg');
+}
+
+#sinp {
+    text-decoration: none;
+    width: 25%;
+}
+
+.dropDownPanel {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.title {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: smaller;
+}
